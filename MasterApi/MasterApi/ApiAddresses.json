@@ -1,3 +1,4 @@
 {
-  "UnitedApi": "https://localhost:44369/api/United"
+  "Crystal": "https://crystal/api/",
+  "BandGap": "https://bandgap/api/"
 }
