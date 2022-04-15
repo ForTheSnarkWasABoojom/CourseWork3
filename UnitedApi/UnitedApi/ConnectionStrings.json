@@ -1,4 +1,3 @@
 {
-    "BandGap": "Data Source=LAPTOP-BTHQN2MC;Initial Catalog=BandGap;Integrated Security=True",
-    "Crystal": "Data Source=LAPTOP-BTHQN2MC;Initial Catalog=Crystal;Integrated Security=True"
+    "DB": "Data Source=LAPTOP-BTHQN2MC;Initial Catalog=BandGap;Integrated Security=True"
 }
