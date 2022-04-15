@@ -1,15 +1,42 @@
 USE [Crystal]
 GO
 
-/****** Object:  View [dbo].[MetaSystemProperties]    Script Date: 14.04.2022 21:35:52 ******/
+
 SET ANSI_NULLS ON
 GO
-
 SET QUOTED_IDENTIFIER ON
 GO
+Create OR ALTER view [dbo].[MetaChemicalSystems] 
+as
+-- SELECT * FROM [dbo].[MetaChemicalSystems] 
+select distinct trim('-' from Help) as System
+from  HeadTabl
+WHERE HeadClue<>1000
+GO
 
-create view [dbo].[MetaSystemProperties] as
 
+
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+create OR ALTER view [dbo].[MetaProperties]
+as
+-- SELECT * FROM [dbo].[MetaProperties] 
+select nazvprop as PropertyDescription
+from Properties
+GO
+
+
+
+
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+create OR ALTER view [dbo].[MetaSystemProperties]
+as
+-- SELECT * FROM [dbo].[MetaSystemProperties] 
 	SELECT distinct trim('-' from Help) as System, 'Аналитический обзор' as Property  FROM RefrTabl
 inner join HeadTabl on
 HeadTabl.HeadClue=RefrTabl.HeadClue
